@@ -1,0 +1,29 @@
+﻿@model IEnumerable<ProyectoFinal_natalinviquez.Models.Maquina>
+@{
+    ViewData["Title"] = "Lista de maquinas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <div class="row">
+        <form method="post">
+        <label> Al pulsar sobre este boton, se crea la BD de peliculas en Cosmos Db Azure y además crea 2 películas y las inserta en la BD</label><br />
+        <button type="submit" name="accion" value="iniciar" class="btn btn-info">Iniciar acciones CosmosBd</button>
+    </form> 
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Maquinas">Ver maquinas</a>
+        </div>
+
+         <div class="col-sm-6">
+            <a class="btn btn-success d-block" name="accion" asp-action="CreateMaquina" asp-controller="Maquinas">Agregar maquina</a>
+        </div>
+    </div>
+
+
+     <div class="row">
+
+     
+
+    </div>
+</div>

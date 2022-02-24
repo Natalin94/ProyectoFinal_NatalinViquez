@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProyectoFinal_NatalinViquez
+namespace ProyectoFinal_natalinviquez
 {
     public class Program
     {
