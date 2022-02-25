@@ -1,0 +1,31 @@
+﻿@model  IEnumerable<ProyectoFinal_natalinviquez.Models.Producto>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+    <div class="row" style="margin-left:auto;  margin-right: auto;">
+        <img src="@Url.Content("https://www.combinatoria.com.ar/wp-content/uploads/2018/09/Indicadores-ecommerce-vender-online1170x550-900x.png")" width="532px" style="margin-left:auto;  margin-right: auto;" alt="imgf"/> 
+    </div>
+    <hr />
+<div class="container">
+
+    <div class="row">
+
+        <div class="col-sm-6">
+            <a class="btn btn-success d-block" asp-action="ListaProducto" asp-controller="Producto">Ver Productos</a>
+        </div>
+
+         <div class="col-sm-6">
+            <a class="btn btn-success d-block" name="accion" asp-action="CreateProduct" asp-controller="Producto">Agregar Producto</a>
+        </div>
+    </div>
+
+
+     <div class="row">
+
+     
+
+    </div>
+</div>

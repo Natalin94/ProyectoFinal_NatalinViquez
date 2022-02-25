@@ -22,9 +22,9 @@ namespace ProyectoFinal_natalinviquez.Services
         {
             String endpoint = configuration["CosmosDb:endPoint"];
             String primarykey = configuration["CosmosDb:primaryKey"];
-            this.bbdd = "Peliculas BBDD";
-            this.collection = "MaquinasCollection";
-            this.collectionProducto = "ProductoCollection";
+            this.bbdd = "Simulacion BBDD";
+            this.collection = "Maquinas";
+           
             this.client = new DocumentClient(new Uri(endpoint), primarykey);
           
         }
@@ -39,10 +39,10 @@ namespace ProyectoFinal_natalinviquez.Services
         public async Task CrearColeccionAsync()
         {
             DocumentCollection coleccion = new DocumentCollection() { Id = this.collection };
-          //  DocumentCollection collectionProducto = new DocumentCollection() { Id = this.collection };
+            DocumentCollection collectionProducto = new DocumentCollection() { Id = this.collectionProducto };
             //Factory es para recuperar de cosmos la base de datos
-            await this.client.CreateDocumentCollectionAsync(UriFactory.CreateDatabaseUri(this.bbdd), coleccion);
-          
+            await this.client.CreateDocumentCollectionAsync(UriFactory.CreateDatabaseUri(this.bbdd), collectionProducto);
+            
         }
 
         public async Task InsertarMaquina(Maquina maquina)
@@ -105,5 +105,7 @@ namespace ProyectoFinal_natalinviquez.Services
 
             return query.ToList();
         }
+
+       
     }
 }

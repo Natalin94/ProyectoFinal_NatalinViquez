@@ -6,13 +6,15 @@
 
 <div class="container">
 
+    <div class="row" style="margin-left:auto;  margin-right: auto;">
+        <img src="@Url.Content("https://www.ceupe.mx/images/easyblog_articles/305/Imagen-1.jpg")" width="532px" style="margin-left:auto;  margin-right: auto;" alt="imgf"/> 
+    </div>
+    <hr />
+
     <div class="row">
-        <form method="post">
-        <label> Al pulsar sobre este boton, se crea la BD de peliculas en Cosmos Db Azure y además crea 2 películas y las inserta en la BD</label><br />
-        <button type="submit" name="accion" value="iniciar" class="btn btn-info">Iniciar acciones CosmosBd</button>
-    </form> 
+
         <div class="col-sm-6">
-            <a class="btn btn-success d-block" asp-action="Create" asp-controller="Maquinas">Ver maquinas</a>
+            <a class="btn btn-success d-block" asp-action="ListaMaquinas" asp-controller="Maquinas">Ver maquinas</a>
         </div>
 
          <div class="col-sm-6">

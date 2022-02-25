@@ -35,7 +35,6 @@ namespace ProyectoFinal_natalinviquez.Controllers
         }
 
         [HttpPost]
-
         public async Task<IActionResult> Index(String accion)
         {
             await this.service.CrearBbddAsync();
